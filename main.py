@@ -16,10 +16,10 @@ for artist in artists:
 
 df = process_sentiment(all_data)
 
-print("\n--- PROCESSED DATAFRAME (First 5 Rows) ---")
+print("\n   PROCESSED DATAFRAME (First 5 Rows)    ")
 print(df.head())
 
-print("\n--- AVERAGE SENTIMENT PER ARTIST ---")
+print("\n   AVERAGE SENTIMENT PER ARTIST    ")
 summary = df.groupby('artist').agg(
     avg_sentiment=('sentiment_score', 'mean'),
     total_comments=('comment', 'count'),
